@@ -1,2 +1,18 @@
-<h2><%= link_to post.title, post_path(post) %></h2>
-<%= post.summary %>
+<article class="post">
+  <section class="post-head">
+    <h2><%= link_to post.title, post_path(post) %></h2>
+    <small>
+      <time><%= post.created_at.to_date.strftime("%d %B, %Y")%></time>
+      |
+      <%= link_to 'Edit', edit_post_path(post), class: "text-warning"%>
+      |
+      <%= link_to 'Delete',  post_path(post), class: "text-danger", method: :delete, data: {confirm: 'Are your sure?'}%>
+    </small>
+
+  </section>
+
+  <section class="post-summary">
+
+  </section>
+  
+</article>

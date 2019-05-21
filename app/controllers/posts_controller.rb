@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @post = Post.all
+    @posts = Post.all
   end
 
   def show
@@ -16,9 +16,9 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to @post
+      redirect_to @post, success: 'Post successfully created'
     else
-      render :new
+      render :new, danger: 'Post not created'
     end
 
   end
@@ -28,15 +28,15 @@ class PostsController < ApplicationController
 
   def update
     if @post.update_attributes(post_params)
-      redirect_to @post
+      redirect_to @post, success: 'Post successfully updated'
     else
-      render :edit
+      render :edit, danger: 'Post not updated'
     end
   end
 
   def destroy
     @post.destroy
-    redirect_to posts_path
+    redirect_to posts_path, info: 'Post deleted'
 
   end
 
