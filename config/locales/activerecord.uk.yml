@@ -1,0 +1,13 @@
+uk:
+  activerecord:
+    models:
+      post: 'Пост'
+    attributes:
+      post:
+        title: 'Заголовок поста'
+        summary: 'Короткий опис'
+        body: 'Пост'
+    errors:
+      messages:
+        blank: 'не може бути пустим'
+        too_short: 'не може бути коротким'

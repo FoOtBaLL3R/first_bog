@@ -18,14 +18,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="<%= posts_path %>">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="<%= posts_path %>"><%= t('.title') %> <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contacts</a>
+              <a class="nav-link" href="#"><%= t('.title1') %></a>
             </li>
 
           </ul>
-          <%= link_to 'New Post', new_post_path, class: 'btn btn-outline-primary pull-xs' %>
+          <%= link_to t('.new_post'), new_post_path, class: 'btn btn-outline-primary mr-md-5' %>
+
+            <li class="nav-item<%= " active" if I18n.locale == :uk  %> mr-md-4">
+              <%= link_to "Укр", { locale: :uk }, class: "nav-link" %>
+            </li>
+            <li class="nav-item<%= " active" if I18n.locale == :en  %>">
+              <%= link_to "En", { locale: :en }, class: "nav-link" %>
+            </li>
+
         </div>
       </nav>
 

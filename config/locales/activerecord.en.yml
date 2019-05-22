@@ -1,0 +1,13 @@
+uk:
+  activerecord:
+    models:
+      post: 'Post'
+    attributes:
+      post:
+        title: 'Title'
+        summary: 'Summary'
+        body: 'Body'
+    errors:
+      messages:
+        blank: 'can not be empty'
+        too_short: 'can not be short'

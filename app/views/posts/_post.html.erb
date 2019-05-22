@@ -4,15 +4,15 @@
     <small>
       <time><%= post.created_at.to_date.strftime("%d %B, %Y")%></time>
       |
-      <%= link_to 'Edit', edit_post_path(post), class: "text-warning"%>
+      <%= link_to t('.edit'), edit_post_path(post), class: "text-warning"%>
       |
-      <%= link_to 'Delete',  post_path(post), class: "text-danger", method: :delete, data: {confirm: 'Are your sure?'}%>
+      <%= link_to t('.delete'),  post_path(post), class: "text-danger", method: :delete, data: {confirm: 'Are your sure?'}%>
     </small>
 
   </section>
 
   <section class="post-summary">
-
+    <%= post.summary %>
   </section>
-  
+
 </article>

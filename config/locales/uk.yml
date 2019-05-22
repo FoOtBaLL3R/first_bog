@@ -1,0 +1,22 @@
+uk:
+  common:
+    errors: 'При заповнені форми виникли помилки'
+    back: 'Назад'
+  posts:
+    index:
+      title: 'Пости'
+    new:
+      title: 'Новий пост'
+    edit:
+      title: 'Редагування поста'
+    form:
+      create: 'Створити пост'
+      edit: 'Редагувати пост'
+    post:
+      edit: 'Редагувати'
+      delete: 'Видалити'
+  layouts:
+    application:
+      title: 'Головна'
+      title1: 'Контакти'
+      new_post: 'Новий пост'
