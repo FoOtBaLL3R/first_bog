@@ -1,11 +1,20 @@
-<h1><%= @post.title %></h1>
+<article class="post">
+  <section class="post-head">
+    <h1><%= @post.title %></h1>
 
-<small>
-  <time><%= @post.created_at.to_date.strftime("%d %B, %Y")%></time>
-  |
-  <%= link_to t('posts.post.edit'), edit_post_path(@post), class: "text-warning"%>
-  |
-  <%= link_to t('posts.post.delete'),  post_path(@post), class: "text-danger", method: :delete, data: {confirm: 'Are your sure?'}%>
-</small>
+    <small>
+      <time><%= @post.created_at.to_date.strftime("%d %B, %Y")%></time>
+      |
+      <%= link_to t('posts.post.edit'), edit_post_path(@post), class: "text-warning"%>
+      |
+      <%= link_to t('posts.post.delete'),  post_path(@post), class: "text-danger", method: :delete, data: {confirm: 'Are your sure?'}%>
+    </small>
+  </section>
 
-<p><%= @post.body %></p>
+  <section class="post-head">
+    <%= image_tag @post.image.url(:large), class: 'img-show' if @post.image? %>
+    <%= @post.body %>
+  </section>
+
+
+</article>

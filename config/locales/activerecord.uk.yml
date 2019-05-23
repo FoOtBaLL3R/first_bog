@@ -6,7 +6,7 @@ uk:
       post:
         title: 'Заголовок поста'
         summary: 'Короткий опис'
-        body: 'Пост'
+        body: 'Текст'
     errors:
       messages:
         blank: 'не може бути пустим'
