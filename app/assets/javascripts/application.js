@@ -15,5 +15,6 @@
 //= require popper
 //= require bootstrap
 //= require activestorage
+//= require tinymce
 //= require turbolinks
 //= require_tree .
