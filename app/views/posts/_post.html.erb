@@ -9,11 +9,13 @@
       <%= link_to t('.delete'),  post_path(post), class: "text-danger", method: :delete, data: {confirm: 'Are your sure?'}%>
     </small>
 
+
   </section>
 
   <section class="post-summary clearfix">
     <%= image_tag post.image.url(:thumb), class: 'img-thumbnail thumb' if post.image? %>
     <%= post.summary %>
   </section>
+
 
 </article>

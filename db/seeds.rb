@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+100.times do
+  Post.create(
+    title: Faker::Hipster.sentence,
+    summary: Faker::Hipster.paragraph(2),
+    body: Faker::Hipster.paragraphs(6)
+  )
+end

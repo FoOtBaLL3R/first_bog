@@ -3,6 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.5'
 
+# Pagination
+gem 'kaminari'
+
+gem 'faker', '~> 1.9', '>= 1.9.3'
 
 # WYSIWYG text editor
 gem 'tinymce-rails', '~> 5.0', '>= 5.0.2'
