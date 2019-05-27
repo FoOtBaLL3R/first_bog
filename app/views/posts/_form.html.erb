@@ -15,12 +15,12 @@
 
   <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title, class: 'form-control' %>
+    <%= f.text_field :title, placeholder: t('.title'), class: 'form-control' %>
   </div>
 
   <div class="form-group">
     <%= f.label :summary %>
-    <%= f.text_area :summary, class: 'form-control' %>
+    <%= f.text_area :summary, placeholder: t('.summary'), class: 'form-control' %>
   </div>
 
   <div class="form-group">
@@ -29,7 +29,11 @@
   </div>
 
   <div class="form-group">
-    <%= f.file_field :image %>
+    <label><%= t('.upload') %></label>
+    <p><%= image_tag(@post.image_url(:media)) if @post.image? %></p>
+    <%= f.file_field :image, class: 'form-control-file' %>
+    <%= f.hidden_field :image_cache %>
+
   </div>
 
   <div class="form-group">

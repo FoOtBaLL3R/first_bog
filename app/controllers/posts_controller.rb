@@ -16,9 +16,10 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to @post, success: 'Post successfully created'
+      redirect_to @post, success: t('.created')
     else
-      render :new, danger: 'Post not created'
+      flash.now[:danger] = t('.notcreated')
+      render :new
     end
 
   end
@@ -28,15 +29,16 @@ class PostsController < ApplicationController
 
   def update
     if @post.update_attributes(post_params)
-      redirect_to @post, success: 'Post successfully updated'
+      redirect_to @post, success: t('.updated')
     else
-      render :edit, danger: 'Post not updated'
+      flash.now[:danger] = t('.notupdated')
+      render :edit
     end
   end
 
   def destroy
     @post.destroy
-    redirect_to posts_path, info: 'Post deleted'
+    redirect_to posts_path, info: t('.deleted')
 
   end
 

@@ -10,11 +10,20 @@ uk:
     edit:
       title: 'Редагування поста'
     form:
+      title: 'Заголовок поста'
+      summary: 'Короткий опис'
       create: 'Створити пост'
       edit: 'Редагувати пост'
+      upload: 'Завантажте картинку'
     post:
       edit: 'Редагувати'
       delete: 'Видалити'
+    create:
+      created: 'Пост створено'
+      notcreated: 'Пост не створено'
+    update:
+      updated: 'Пост оновлено'
+      notupdated: 'Пост не оновлено'
   layouts:
     application:
       title: 'Головна'

@@ -10,11 +10,20 @@ en:
     edit:
       title: 'Edit post'
     form:
+      title: 'Title'
+      summary: 'Summary'
       create: 'Create post'
       edit: 'Update post'
+      upload: 'Upload photo'
     post:
       edit: 'Edit'
       delete: 'Delete'
+    create:
+      created: 'Post created'
+      notcreated: 'Post no created'
+    update:
+      updated: 'Post updated'
+      notupdated: 'Post no updated'
   layouts:
     application:
       title: 'Home'
