@@ -20,12 +20,23 @@
 
   <div class="form-group">
     <%= f.label :summary %>
-    <%= f.text_area :summary, placeholder: t('.summary'), class: 'form-control' %>
+    <%= f.text_field :summary, placeholder: t('.summary'), class: 'form-control' %>
   </div>
 
   <div class="form-group">
     <%= f.text_area :body, class: 'tinymce', rows: 20 %>
     <%= tinymce %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :all_tags %>
+    <%= f.text_field :all_tags, placeholder: t('.tags'), class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :category_id %>
+    <%= f.collection_select :category_id, Category.order(:name), :id, :name, { include_blank: true },
+    class: 'form-control' %>
   </div>
 
   <div class="form-group">

@@ -1,7 +1,9 @@
 uk:
+
   common:
     errors: 'При заповнені форми виникли помилки'
     back: 'Назад'
+
   posts:
     index:
       title: 'Пости'
@@ -15,17 +17,52 @@ uk:
       create: 'Створити пост'
       edit: 'Редагувати пост'
       upload: 'Завантажте картинку'
+      tags: 'Теги'
+
     post:
       edit: 'Редагувати'
       delete: 'Видалити'
+      del: 'Ви впевнені, що хочете видали пост?'
+    show:
+      del: 'Ви впевнені, що хочете видали пост?'
     create:
       created: 'Пост створено'
       notcreated: 'Пост не створено'
     update:
       updated: 'Пост оновлено'
       notupdated: 'Пост не оновлено'
+    destroy:
+      deleted: 'Пост видалено'
+  tags:
+    show:
+      nopost: 'Пости відсутні'
+
+  categories:
+    index:
+      title: 'Категорії'
+    new:
+      title: 'Нова категорія'
+    edit:
+      title: 'Редагування Категорії'
+    form:
+      title: 'Назва категорії'
+      create: 'Створити категорію'
+      edit: 'Редагувати категорію'
+    create:
+      created: 'Категорію створено'
+      notcreated: 'Категорію не створено'
+    update:
+      updated: 'Категорію оновлено'
+      notupdated: 'Категорію не оновлено'
+    destroy:
+      deleted: 'Категорію видалено'
+
   layouts:
     application:
-      title: 'Головна'
-      title1: 'Контакти'
+      title: 'Головна'      
       new_post: 'Новий пост'
+      tags: 'Теги'
+
+  shared:
+    submenu:
+      category: 'Категорії'

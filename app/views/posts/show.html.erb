@@ -1,13 +1,20 @@
+<%= render 'shared/breadcrumb', category: @post.category %>
+
 <article class="post">
   <section class="post-head">
     <h1><%= @post.title %></h1>
 
     <small>
       <time><%= @post.created_at.to_date.strftime("%d %B, %Y")%></time>
+      <% if @post.category.present? %>
+        |
+        <%= link_to @post.category.name, @post.category %>
+      <% end %>
       |
       <%= link_to t('posts.post.edit'), edit_post_path(@post), class: "text-warning"%>
       |
-      <%= link_to t('posts.post.delete'),  post_path(@post), class: "text-danger", method: :delete, data: {confirm: 'Are your sure?'}%>
+      <%= link_to t('posts.post.delete'),  post_path(@post), class: "text-danger", method: :delete,
+      data: {confirm: t('.del')}%>
     </small>
   </section>
 

@@ -14,6 +14,8 @@ gem 'tinymce-rails', '~> 5.0', '>= 5.0.2'
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 gem 'mini_magick', '~> 4.9', '>= 4.9.3'
 
+gem 'ancestry', '~> 3.0', '>= 3.0.5'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'

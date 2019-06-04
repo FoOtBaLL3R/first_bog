@@ -7,6 +7,12 @@ uk:
         title: 'Title'
         summary: 'Summary'
         body: 'Body'
+        all_tags: 'Tags'
+        category_id: 'Category'
+        
+      category:
+        name: 'Name'
+        parent_id: 'Parent category'
     errors:
       messages:
         blank: 'can not be empty'

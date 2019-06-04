@@ -7,7 +7,14 @@ uk:
         title: 'Заголовок поста'
         summary: 'Короткий опис'
         body: 'Текст'
+        all_tags: 'Теги'
+        category_id: 'Категорії'
+        category: 'Категорія'
+      category:
+        name: 'Назва'
+        parent_id: 'Категорія батька'
     errors:
       messages:
         blank: 'не може бути пустим'
         too_short: 'не може бути коротким'
+        required: 'не вибрана'
