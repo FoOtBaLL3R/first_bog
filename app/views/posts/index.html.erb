@@ -1,4 +1,8 @@
 <h1><%= t('.title') %></h1>
 
+<% if user_signed_in? && current_user.admin? %>
+<%= link_to t('.new_post'), new_admin_post_path, class: 'btn btn-outline-primary btn-sm' %>
+<% end %>
+
 <%= render @posts %>
 <div class="d-flex justify-content-center mt-5"><%= paginate @posts %></div>

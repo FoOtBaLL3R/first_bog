@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+    before_action :set_post, only: :show
 
   def index
     @posts = Post.page(params[:page])
@@ -9,38 +8,6 @@ class PostsController < ApplicationController
   def show
   end
 
-  def new
-    @post = Post.new
-  end
-
-  def create
-    @post = Post.new(post_params)
-    if @post.save
-      redirect_to @post, success: t('.created')
-    else
-      flash.now[:danger] = t('.notcreated')
-      render :new
-    end
-
-  end
-
-  def edit
-  end
-
-  def update
-    if @post.update_attributes(post_params)
-      redirect_to @post, success: t('.updated')
-    else
-      flash.now[:danger] = t('.notupdated')
-      render :edit
-    end
-  end
-
-  def destroy
-    @post.destroy
-    redirect_to posts_path, info: t('.deleted')
-
-  end
 
   private
 
@@ -48,13 +15,5 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
   end
-
-  def post_params
-    params.require(:post).permit(:title, :summary, :body, :image, :category_id, :all_tags)
-
-  end
-
-
-
 
 end

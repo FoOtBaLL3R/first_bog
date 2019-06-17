@@ -37,30 +37,30 @@ en:
   tags:
     show:
       nopost: 'Posts are absent'
-
-  categories:
-    index:
-      title: 'Category'
-    new:
-      title: 'New category'
-    edit:
-      title: 'Edit category'
-    form:
-      title: 'Category title'
-      create: 'Create category'
-      edit: 'Edit category'
-    create:
-      created: 'Category created'
-      notcreated: 'Category no created'
-    update:
-      updated: 'Category updated'
-      notupdated: 'Category no updated'
-    destroy:
-      deleted: 'Category deleted'
+  admin:
+    categories:
+      index:
+        title: 'Category'
+      new:
+        title: 'New category'
+      edit:
+        title: 'Edit category'
+      form:
+        title: 'Category title'
+        create: 'Create category'
+        edit: 'Edit category'
+      create:
+        created: 'Category created'
+        notcreated: 'Category no created'
+      update:
+        updated: 'Category updated'
+        notupdated: 'Category no updated'
+      destroy:
+        deleted: 'Category deleted'
 
   layouts:
     application:
-      title: 'Home'      
+      title: 'Home'
       new_post: 'New Post'
       tags: 'Tags'
 

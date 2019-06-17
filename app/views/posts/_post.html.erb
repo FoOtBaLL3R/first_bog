@@ -7,11 +7,11 @@
         |
         <%= link_to post.category.name, post.category %>
       <% end %>
-      <% if user_signed_in? %>
+      <% if user_signed_in? && current_user.admin? %>
         |
-        <%= link_to t('.edit'), edit_post_path(post), class: "text-warning"%>
+        <%= link_to t('.edit'), edit_admin_post_path(post), class: "text-warning"%>
         |
-        <%= link_to t('.delete'), post_path(post), class: "text-danger", method: :delete, data: {confirm: t('.del')}%>
+        <%= link_to t('.delete'), admin_post_path(post), class: "text-danger", method: :delete, data: {confirm: t('.del')}%>
       <% end %>
     </small>
 
