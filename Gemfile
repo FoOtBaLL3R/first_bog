@@ -16,6 +16,8 @@ gem 'mini_magick', '~> 4.9', '>= 4.9.3'
 
 gem 'ancestry', '~> 3.0', '>= 3.0.5'
 
+# Devise
+gem 'devise', '~> 4.6', '>= 4.6.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'

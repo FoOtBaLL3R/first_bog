@@ -10,11 +10,13 @@
         |
         <%= link_to @post.category.name, @post.category %>
       <% end %>
-      |
-      <%= link_to t('posts.post.edit'), edit_post_path(@post), class: "text-warning"%>
-      |
-      <%= link_to t('posts.post.delete'),  post_path(@post), class: "text-danger", method: :delete,
-      data: {confirm: t('.del')}%>
+      <% if user_signed_in? %>
+        |
+        <%= link_to t('posts.post.edit'), edit_post_path(@post), class: "text-warning"%>
+        |
+        <%= link_to t('posts.post.delete'),  post_path(@post), class: "text-danger", method: :delete,
+        data: {confirm: t('.del')}%>
+      <% end %>
     </small>
   </section>
 
