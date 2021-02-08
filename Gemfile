@@ -11,7 +11,7 @@ gem 'faker', '~> 1.9', '>= 1.9.3'
 # WYSIWYG text editor
 gem 'tinymce-rails', '~> 5.0', '>= 5.0.2'
 # Images
-gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+gem 'carrierwave', '~> 1.3'
 gem 'mini_magick', '~> 4.9', '>= 4.9.3'
 
 gem 'ancestry', '~> 3.0', '>= 3.0.5'
